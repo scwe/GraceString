@@ -6,17 +6,13 @@ class StringUtil.new(*strings : String){  //this is a hack, change this when mut
     if(strings.size == 0) then {
         array := PrimitiveArray.new(16)
     }else{
-        if(strings.size == 1) then {
-            array := PrimitiveArray.new()
-        }else{
-
-        }
+        array := PrimitiveArray.new(strings[0].size*2 + 1)  //else just use the first one and double it's size
     }
 
     method find(other : String) -> Number{
 
     }
-    
+
     method substringFrom(from: Number)to(to: Number) -> {
 
     }
