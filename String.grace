@@ -1,7 +1,7 @@
 import "mgcollections" as coll
 
 class StringUtil.new(*strings : String){  //this is a hack, change this when mutliple constructors are implemented 
-    var array is confidential := PrimitiveArray.new()
+    var array is confidential
 
     if(strings.size == 0) then {
 
@@ -13,6 +13,6 @@ class StringUtil.new(*strings : String){  //this is a hack, change this when mut
         }
     }
 
-    
+
 
 }

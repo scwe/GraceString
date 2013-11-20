@@ -1,0 +1,33 @@
+annotate fortress code
+boyer moore for find
+looking to java collections for interface
+
+find
+substring
+contains
+indexOf
+replace
+split   //using regex
+equalsIgnoreCase
+matching
+toLowerCare
+toUpperCase
+trim
+capitalize
+swapcase
+charAt (with overloading on [])
+setCharAt (with overloading on []:= )
+length or size
+Regex stuff?? matches contains
+insert
+
+immutability???
+
+
+where does this String class fit in? Is it to be implemented from scratch with a char array under the hood? Or is it to be wrapper of the current string implementation with new utilities. 
+Should it be written in Grace or two implementations for JavaScript and C
+
+
+So the consensus was to at least mock up in grace, find various methods that may need low level optimization, implement them natively or otherwise. And it is to be written from scratch 
+
+So the current fortress implementation uses a tree structure to take care of cocatenation, this means that it can be done in constant O(1) so when a string is cocatenated it is just added to the tree and then the CatString is to stringed by traversing through the 
