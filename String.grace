@@ -2,21 +2,28 @@ import "mgcollections" as coll
 
 class StringUtil.new(*strings : String){  //this is a hack, change this when mutliple constructors are implemented 
     var array is confidential
+    var size : Number
 
     if(strings.size == 0) then {
         array := PrimitiveArray.new(16)
+        size := 0
     }else{
-        if(strings.size == 1) then {
-            array := PrimitiveArray.new()
-        }else{
-
-        }
+        size := strings[0].size
+        array := PrimitiveArray.new(size*2 + 1)  //else just use the first one and double it's size
     }
 
     method find(other : String) -> Number{
 
     }
-    
+
+    method characterTable is confidential(){
+
+    }
+
+    method suffixTable is confidential(){
+
+    }
+
     method substringFrom(from: Number)to(to: Number) -> {
 
     }
