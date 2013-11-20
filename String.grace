@@ -45,8 +45,13 @@ class StringUtil.new(*strings : String){  //this is a hack, change this when mut
 
     }
 
-    method toLowerCare -> StringUtil{
+    method toLowerCase -> StringUtil{
 
+
+        for (0..array.size()) do { i -> 
+
+            print(array[j])
+        }
     }
 
     method toUpperCase -> StringUtil{
