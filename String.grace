@@ -54,7 +54,7 @@ class StringUtil.new(*strings : String){  //this is a hack, change this when mut
         }
 
         for(0..(length - 2)) do{ index ->
-            
+            var k : Number :=
         }
     }
 
@@ -148,6 +148,18 @@ class StringUtil.new(*strings : String){  //this is a hack, change this when mut
         }
 
         return end
+    }
+
+    method ==(other){
+
+    }
+
+    method ++(other){
+
+    }
+
+    method +(other){
+        
     }
 
 }
