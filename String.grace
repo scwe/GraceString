@@ -34,7 +34,7 @@ class StringUtil.new(*strings : String){  //this is a hack, change this when mut
 
     }
 
-    method contains(other : String) -> Bool{  //same as Find
+    method contains(other : String){  //same as Find
 
     }
 
@@ -50,11 +50,11 @@ class StringUtil.new(*strings : String){  //this is a hack, change this when mut
 
     }
 
-    method equalsIgnoreCase(other : String) -> Bool{
+    method equalsIgnoreCase(other : String){
 
     }
 
-    method matching(regex : String) -> Bool{
+    method matching(regex : String){
 
     }
 
@@ -63,7 +63,7 @@ class StringUtil.new(*strings : String){  //this is a hack, change this when mut
 
         for (0..array.size()) do { i -> 
 
-            print(array[j])
+            print(array[i])
         }
     }
 
