@@ -30,7 +30,7 @@ class StringUtil.new(*strings : String){  //this is a hack, change this when mut
 
     }
 
-    method substringFrom(from: Number)to(to: Number) -> {
+    method substringFrom(from: Number)to(to: Number) -> Done{
 
     }
 
@@ -42,7 +42,7 @@ class StringUtil.new(*strings : String){  //this is a hack, change this when mut
 
     }
 
-    method replace(other : String, toReplace : String) -> {
+    method replace(other : String, toReplace : String) -> StringUtil{
 
     }
 
@@ -58,8 +58,13 @@ class StringUtil.new(*strings : String){  //this is a hack, change this when mut
 
     }
 
-    method toLowerCare -> StringUtil{
+    method toLowerCase -> StringUtil{
 
+
+        for (0..array.size()) do { i -> 
+
+            print(array[j])
+        }
     }
 
     method toUpperCase -> StringUtil{
@@ -102,7 +107,7 @@ class StringUtil.new(*strings : String){  //this is a hack, change this when mut
 
     //}
 
-    method insert(other : String, index : Number) -> { //I don't know what this does
+    method insert(other : String, index : Number) -> StringUtil { //I don't know what this does
 
     } 
 
