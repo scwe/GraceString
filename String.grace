@@ -9,7 +9,6 @@ class StringUtil.new(*strings : String){  //this is a hack, change this when mut
         for(1..strings[1].size) do { index ->
             array.push((strings[1])[index])
         }
-
         length := strings[1].size
     }
 
@@ -58,8 +57,14 @@ class StringUtil.new(*strings : String){  //this is a hack, change this when mut
         }
     }
 
-    method substringFrom(from: Number)to(to: Number) -> Done{
-
+    method substringFrom(from: Number)to(to: Number) -> StringUtil{
+        var ret := [];
+        var count := 0;
+        for (from...to)do{ j ->
+            ret[count] := array[j];
+            count := count +1;
+        }
+        return StringUtil.new(ret);
     }
 
     method contains(other : String){  //same as Find
@@ -68,7 +73,7 @@ class StringUtil.new(*strings : String){  //this is a hack, change this when mut
 
     method indexOf(other : String) -> Number{  //pretty much the same as find
 
-    }
+    }   
 
     method replace(other : String, toReplace : String) -> StringUtil{
 
@@ -88,10 +93,9 @@ class StringUtil.new(*strings : String){  //this is a hack, change this when mut
 
     method toLowerCase -> StringUtil{
 
+        for (1..length) do { i -> 
 
-        for (0..array.size()) do { i -> 
-
-            print(array[i])
+            print(array[i]++" moo ")
         }
     }
 
@@ -113,6 +117,11 @@ class StringUtil.new(*strings : String){  //this is a hack, change this when mut
 
     method charAt(index : Number) -> String{   //this and the next one should so the some thing, although duplicate the code 
 
+        for (1..length) do { j-> 
+
+
+
+        }
     }
 
     method [](index) -> String{
@@ -164,4 +173,9 @@ class StringUtil.new(*strings : String){  //this is a hack, change this when mut
 
 }
 
-var test := StringUtil.new("Hello")
+
+var test := "test";
+var stringTest := StringUtil.new(test); 
+stringTest.toLowerCase;
+
+
