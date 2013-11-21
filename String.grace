@@ -18,7 +18,7 @@ class StringUtil.new(*strings : String){  //this is a hack, change this when mut
 
     }
 
-    method characterTable is confidential{ 
+    method characterTable is confidential{
         var map := coll.map.new
 
         for(0..(length - 1)) do{ index ->
@@ -36,13 +36,24 @@ class StringUtil.new(*strings : String){  //this is a hack, change this when mut
         }
 
         for(0..(length - 2)) do {index ->
-            for(0..(length)) do {
+            var j := 0
+            var s := index + 1
+
+            while(s+j < length) do {
+
+                while() do {
+                    j++
+                    if(s+j == m) then {
+                        array[index] = (length - index - 1) + (length - j) 
+                    }
+                }
 
             }
+
         }
 
         for(0..(length - 2)) do{ index ->
-
+            var k : Number :=
         }
     }
 
@@ -135,7 +146,30 @@ class StringUtil.new(*strings : String){  //this is a hack, change this when mut
 
     method insert(other : String, index : Number) -> StringUtil { //I don't know what this does
 
-    } 
+    }
+
+    method asString() -> String{
+        var end : String := ""
+
+        for(array) do {
+            ele ->
+            end ++ ele
+        }
+
+        return end
+    }
+
+    method ==(other){
+
+    }
+
+    method ++(other){
+
+    }
+
+    method +(other){
+        
+    }
 
 }
 
