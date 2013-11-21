@@ -16,11 +16,17 @@ class StringUtil.new(*strings : String){  //this is a hack, change this when mut
 
     }
 
-    method characterTable is confidential(){
+    method characterTable is confidential{ 
+        var map := coll.map.new
 
+        for(0..(size - 1)) do{ index ->
+            map.put(array[index], size - index - 1)
+        }
+
+        map
     }
 
-    method suffixTable is confidential(){
+    method suffixTable is confidential{
 
     }
 
