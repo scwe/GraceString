@@ -112,3 +112,11 @@ class StringUtil.new(*strings : String){  //this is a hack, change this when mut
     } 
 
 }
+
+//Testing 
+
+
+var test := "test";
+var stringTest := StringUtil.(test); 
+stringTest.toLowerCase;
+
