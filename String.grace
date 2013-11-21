@@ -1,16 +1,19 @@
 import "mgcollections" as coll
 
 class StringUtil.new(*strings : String){  //this is a hack, change this when mutliple constructors are implemented 
-    var array is confidential
-    var size : Number
+    var array is confidential := []
+    var length : Number
 
-    if(strings.size == 0) then {
-        array := PrimitiveArray.new(16)
-        size := 0
-    }else{
-        size := strings[0].size
-        array := PrimitiveArray.new(size*2 + 1)  //else just use the first one and double it's size
+    if(strings.size != 0) then {
+        
+        for(1..strings[1].size) do { index ->
+            array.push((strings[1])[index])
+        }
+
+        length := strings[1].size
     }
+
+    print "{array} with length {length}"   //TODO remove the debugging code
 
     method find(other : String) -> Number{
 
@@ -19,15 +22,29 @@ class StringUtil.new(*strings : String){  //this is a hack, change this when mut
     method characterTable is confidential{ 
         var map := coll.map.new
 
-        for(0..(size - 1)) do{ index ->
-            map.put(array[index], size - index - 1)
+        for(0..(length - 1)) do{ index ->
+            map.put(array[index], length - index - 1)
         }
 
         map
     }
 
     method suffixTable is confidential{
+        var array := PrimitiveArray.new(length)
 
+        for(0..(length - 1 )) do {index ->
+            array[index] := 2*length - index - 1
+        }
+
+        for(0..(length - 2)) do {index ->
+            for(0..(length)) do {
+
+            }
+        }
+
+        for(0..(length - 2)) do{ index ->
+
+        }
     }
 
     method substringFrom(from: Number)to(to: Number) -> Done{
@@ -112,3 +129,5 @@ class StringUtil.new(*strings : String){  //this is a hack, change this when mut
     } 
 
 }
+
+var test := StringUtil.new("Hello")
