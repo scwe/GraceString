@@ -40,12 +40,12 @@ class StringUtil.new(*strings : String){  //this is a hack, change this when mut
             var j := 0
             var s := index + 1
 
-            while(s+j < length) do {
+            while((s+j) < length) do {
 
-                while() do {
-                    j++
-                    if(s+j == m) then {
-                        array[index] = (length - index - 1) + (length - j) 
+                while(true) do {
+                    j := j + 1
+                    if((s+j) == length) then {
+                        array[index] := (length - index - 1) + (length - j) 
                     }
                 }
 
@@ -54,7 +54,7 @@ class StringUtil.new(*strings : String){  //this is a hack, change this when mut
         }
 
         for(0..(length - 2)) do{ index ->
-            var k : Number :=
+            var k : Number := 30
         }
     }
 
@@ -159,7 +159,7 @@ class StringUtil.new(*strings : String){  //this is a hack, change this when mut
     }
 
     method +(other){
-        
+
     }
 
 }
